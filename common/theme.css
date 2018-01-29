@@ -23,5 +23,5 @@ h1, h2, h3, h5, h6 {
 }
 
 ul, ol, dl {
-
+color: var(--color-neutral: #808080);
 }
