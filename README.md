@@ -1,3 +1,3 @@
 ---
-fontUrl: "https://fonts.googleapis.com/css?family=Roboto:400,700|Yesteryear"
+fontUrl: "https://fonts.googleapis.com/css?family=Pacifico|Roboto"
 ---
