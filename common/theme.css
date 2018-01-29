@@ -23,5 +23,17 @@ h1, h2, h3, h5, h6 {
 }
 
 ul, ol, dl {
-color: var(--color-neutral: #808080);
+  color: var(--color-neutral: #808080);
+}
+
+a {
+  color: var(--color-primary-light: #b38d97);
+}
+
+blockquote, cite {
+  color:
+}
+
+em, strong, del, ins, abbr, dfn, i, b, mark, q, s, u {
+  color:
 }
