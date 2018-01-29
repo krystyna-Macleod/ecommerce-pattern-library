@@ -1,13 +1,13 @@
 :root {
-  --color-primary: goldenrod;
+  --color-primary: #582c4d;
   --color-primary-light: gold;
   --color-secondary: lightcoral;
-  --color-accent: greenyellow;
+  --color-accent: #a0e5d3;
   --color-neutral-beige: #e2e2e2;
   --color-whatever: peachpuff;
 
-  --font-primary: 'Roboto', sans-serif;
-  --font-secondary: 'Yesteryear', cursive;
+  --font-primary: "Roboto", sans-serif;
+  --font-secondary: "Yesteryear", cursive;
 }
 
 html {
