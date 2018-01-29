@@ -1,3 +1,3 @@
 ---
-fontUrl: "https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,700|Source+Code+Pro:400,700"
+fontUrl: "https://fonts.googleapis.com/css?family=Roboto:400,700|Yesteryear"
 ---
