@@ -24,15 +24,15 @@ h5 {
 }
 
 h1, h2, h3, h6 {
-  color: var(color-primary-light: #b38d97);
+  color: var(color-primary-light);
 }
 
 ul, ol, dl {
-  color: var(--color-neutral: #808080);
+  color: var(--color-neutral);
 }
 
 a {
-  color: var(--color-primary-light: #b38d97);
+  color: var(--color-primary-light);
 }
 
 blockquote, cite {
