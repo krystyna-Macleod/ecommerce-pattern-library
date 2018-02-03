@@ -18,8 +18,13 @@ h4 {
   font-family: "Pacifico", cursive;
 }
 
-h1, h2, h3, h5, h6 {
+h5 {
   color: var(--color-primary);
+  font-family: "Pacifico", cursive;
+}
+
+h1, h2, h3, h6 {
+  color: var(color-primary-light: #b38d97);
 }
 
 ul, ol, dl {
