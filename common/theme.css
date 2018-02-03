@@ -24,7 +24,7 @@ h4 {
 }
 
 h1, h2, h3, h6 {
-  color: var(color-primary-light);
+  color: var(--color-primary-light);
 }
 
 ul, ol, dl {
@@ -35,8 +35,12 @@ a {
   color: var(--color-primary-light);
 }
 
-blockquote, cite {
-  color:
+blockquote {
+  color: var(--color-secondary);
+}
+
+cite {
+  color: var(--color-whatever),
 }
 
 em, strong, del, ins, abbr, dfn, i, b, mark, q, s, u {
