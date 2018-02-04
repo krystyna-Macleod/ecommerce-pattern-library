@@ -15,34 +15,69 @@ html {
 
 h1 {
   color: var(--color-primary);
-  font-family: "Pacifico", cursive;
+  font-family: var(--font-secondary);
+}
+
+h2 {
+  color: var(--color-primary);
+  font-family: var(--font-secondary);
+}
+
+h3 {
+  color: var(--color-primary-light);
+  font-family: var(--font-primary);
 }
 
 h4 {
-  color: var(--color-primary);
-  font-family: "Pacifico", cursive;
+  color: var(--color-accent);
+  font-family: var(--font-primary);
+  font-weight: bolder;
 }
 
-h1, h2, h3, h6 {
-  color: var(--color-primary-light);
+h5, h6 {
+  color: var(--color-neutral);
 }
 
 ul, ol, dl {
   color: var(--color-neutral);
+  font-style: normal;
 }
 
 a {
   color: var(--color-primary-light);
+  font-style: normal;
 }
 
 blockquote {
-  color: var(--color-secondary);
+  color: var(--color-primary);
+  font-family: var(--font-primary);
+  font-style: italic;
 }
 
 cite {
   color: var(--color-whatever),
 }
 
-em, strong, del, ins, abbr, dfn, i, b, mark, q, s, u {
-  color:
+em {
+  color: var(--color-primary-light);
+}
+
+strong, b {
+  color: var(--color-primary);
+  font-family: var(--font-primary);
+}
+
+abbr {
+  color: var(--color-primary);
+  font-family: var(--font-primary);
+  font-weight: bold;
+}
+
+mark {
+  color: var(--color-secondary);
+  background-color: var(--color-primary-light);
+}
+
+del, ins, dfn, i, q, s, u {
+  color: var(--color-primary-light);
 }
