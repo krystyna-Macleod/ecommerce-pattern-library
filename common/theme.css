@@ -55,7 +55,7 @@ blockquote {
 }
 
 cite {
-  color: var(--color-whatever),
+  color: var(--color-whatever);
 }
 
 em {
