@@ -6,7 +6,7 @@
   --color-neutral: #808080;
   --color-whatever: #ece2d0;
   --font-primary: "Roboto", sans-serif;
-  --font-secondary: "Pacifico", cursive;
+  --font-secondary: "Lora", serif;
 }
 
 html {
@@ -15,7 +15,7 @@ html {
 
 h1 {
   color: var(--color-primary);
-  font-family: var(--font-secondary);
+  font-family: var(--font-primary);
 }
 
 h2 {
@@ -30,7 +30,7 @@ h3 {
 
 h4 {
   color: var(--color-accent);
-  font-family: var(--font-primary);
+  font-family: var(--font-secondary);
   font-weight: bolder;
 }
 
