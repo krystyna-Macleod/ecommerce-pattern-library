@@ -1182,12 +1182,79 @@
               </button>
               <code><pre id="form-form-code-sample-copy-chunk">&lt;section&gt;
 
-  &lt;header>
-    &lt;div class="gutter-1-8 pad-t wrapper pad-b">
-      &lt;h1 class="wrapper exa bold gutter-1-4 push-1-4">Check Out&lt;/h1>
-      &lt;p class="wrapper mega pad-t-1-4 gutter-1-4 push-1-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&lt;/p>
+  &lt;form class="wrapper">
+    &lt;fieldset>
+      &lt;legend>Customer Information&lt;/legend>
+      &lt;div class="grid">
+        &lt;div class="unit xs-1 s-1 m-1-2 l-1-2 gutter-1-2 pad-t-1-2">
+          &lt;label class="pad-b-1-8" for="-first-name">First name&lt;/label>
+          &lt;input id="first-name" name="first-name">
+        &lt;/div>
+
+        &lt;div class="unit xs-1 s-1 m-1-2 l-1-2 gutter-1-2 pad-t-1-2">
+          &lt;label class="pad-b-1-8" for="last-name">Last name&lt;/label>
+          &lt;input id="last-name" name="last-name">
+        &lt;/div>
+
+        &lt;div class="unit xs-1 s-1 m-1-2 l-1-2 gutter-1-2 push pad-b-1-4">
+          &lt;label for="email">Email&lt;/label>
+          &lt;input id="email" type="email">
+        &lt;/div>
+      &lt;/div>
+    &lt;/fieldset>
+
+    &lt;fieldset>
+      &lt;legend>Billing Information&lt;/legend>
+      &lt;div class="grid">
+        &lt;div class="unit xs-1 s-1 m-1-2 l-1-2 gutter-1-2 pad-t-1-2">
+          &lt;label class="pad-b-1-8" for="address">Street address&lt;/label>
+          &lt;input id="address">
+        &lt;/div>
+
+        &lt;div class="unit xs-1 s-1 m-1-2 l-1-2 gutter-1-2 push-1-2 pad-b">
+          &lt;label class="pad-b-1-8" for="city">City&lt;/label>
+          &lt;input id="city">
+        &lt;/div>
+
+        &lt;div class="unit xs-1 s-1 m-1-2 l-1-2 gutter-1-2 push-1-2 pad-b">
+          &lt;label class="pad-b-1-8" for="province">Province&lt;/label>
+          &lt;select id="province">
+            &lt;option value="">Select a province&lt;/option>
+            &lt;option value="">Alberta&lt;/option>
+            &lt;option value="">British Columbia&lt;/option>
+            &lt;option value="">Manitoba&lt;/option>
+            &lt;option value="">New Brunswick&lt;/option>
+            &lt;option value="">Newfoundland &amp; Labrador&lt;/option>
+            &lt;option value="">Northwest Territories&lt;/option>
+            &lt;option value="">Nova Scotia&lt;/option>
+            &lt;option value="">Nunavut&lt;/option>
+            &lt;option value="">Ontario&lt;/option>
+            &lt;option value="">Prince Edward Island&lt;/option>
+            &lt;option value="">Qu&#xE9;bec&lt;/option>
+            &lt;option value="">Saskatchewan&lt;/option>
+            &lt;option value="">Yukon&lt;/option>
+          &lt;/select>
+        &lt;/div>
+
+        &lt;div class="unit xs-1 s-1 m-1-2 l-1-2 gutter-1-2 push">
+          &lt;label for="postal">Postal code&lt;/label>
+          &lt;input id="postal">
+        &lt;/div>
+
+        &lt;div class="unit xs-1 s-1 m-1-2 l-1-2 gutter-1-2 push-1-4">
+          &lt;label for="tel">Phone number&lt;/label>
+          &lt;input id="tel" type="tel">
+        &lt;/div>
+
+      &lt;/div>
+    &lt;/fieldset>
+
+    &lt;div class="btn2">
+      &lt;button class="btn text-center" type="submit">Continue&lt;/button>
     &lt;/div>
-  &lt;/header>
+
+  &lt;/form>
+
 
 &lt;/section>
 </pre></code>
