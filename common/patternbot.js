@@ -348,9 +348,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library
- * @version 1519652477993
+ * @version 1519652930706
  */
-const patternManifest_1519652477993 = {
+const patternManifest_1519652930706 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -547,10 +547,14 @@ const patternManifest_1519652477993 = {
       "icons": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/images/icons.svg"
     },
     "logos": {
-      "sizeLarge": false,
-      "size64": false,
-      "size32": false,
-      "size16": false
+      "sizeLarge": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/images/logo-256.svg",
+      "size64": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/images/logo-64.svg",
+      "size32": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/images/logo-32.svg",
+      "size16": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/images/logo-16.svg",
+      "size16Local": "logo-16.svg",
+      "sizeLargeLocal": "logo-256.svg",
+      "size32Local": "logo-32.svg",
+      "size64Local": "logo-64.svg"
     },
     "patterns": [
       "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/buttons",
@@ -674,5 +678,5 @@ const patternManifest_1519652477993 = {
   }
 };
 
-patternBotIncludes(patternManifest_1519652477993);
+patternBotIncludes(patternManifest_1519652930706);
 }());
