@@ -348,9 +348,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library
- * @version 1519655226691
+ * @version 1519656686419
  */
-const patternManifest_1519655226691 = {
+const patternManifest_1519656686419 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -523,9 +523,9 @@ const patternManifest_1519655226691 = {
       }
     },
     "icons": [
+      "cart",
       "banner",
       "candle",
-      "cart",
       "facebook",
       "instagram",
       "search",
@@ -605,7 +605,7 @@ const patternManifest_1519655226691 = {
           "localPath": "patterns/cards/basic-card.html",
           "readme": {
             "width": 400,
-            "padding": "2em"
+            "padding": "5em"
           }
         },
         {
@@ -615,7 +615,7 @@ const patternManifest_1519655226691 = {
           "localPath": "patterns/cards/light-card.html",
           "readme": {
             "width": 400,
-            "padding": "2em"
+            "padding": "5em"
           }
         }
       ],
@@ -642,10 +642,40 @@ const patternManifest_1519655226691 = {
       "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/form",
       "html": [
         {
+          "name": "email-form",
+          "namePretty": "Email form",
+          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/form/email-form.html",
+          "localPath": "patterns/form/email-form.html",
+          "readme": {
+            "width": 400
+          }
+        },
+        {
           "name": "form",
           "namePretty": "Form",
           "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/form/form.html",
-          "localPath": "patterns/form/form.html"
+          "localPath": "patterns/form/form.html",
+          "readme": {
+            "width": 400
+          }
+        },
+        {
+          "name": "list-form",
+          "namePretty": "List form",
+          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/form/list-form.html",
+          "localPath": "patterns/form/list-form.html",
+          "readme": {
+            "width": 400
+          }
+        },
+        {
+          "name": "phone-form",
+          "namePretty": "Phone form",
+          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/form/phone-form.html",
+          "localPath": "patterns/form/phone-form.html",
+          "readme": {
+            "width": 400
+          }
         }
       ],
       "md": [
@@ -686,5 +716,5 @@ const patternManifest_1519655226691 = {
   }
 };
 
-patternBotIncludes(patternManifest_1519655226691);
+patternBotIncludes(patternManifest_1519656686419);
 }());
