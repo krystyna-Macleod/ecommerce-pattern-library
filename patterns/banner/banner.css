@@ -1,3 +1,7 @@
 .banner-dark {
   background-color: var(--color-primary);
 }
+
+.banner-dark-text {
+  color: var(--color-primary-light)
+}
