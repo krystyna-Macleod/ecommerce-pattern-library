@@ -348,9 +348,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library
- * @version 1520858769063
+ * @version 1520859471630
  */
-const patternManifest_1520858769062 = {
+const patternManifest_1520859471630 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -806,5 +806,5 @@ const patternManifest_1520858769062 = {
   }
 };
 
-patternBotIncludes(patternManifest_1520858769062);
+patternBotIncludes(patternManifest_1520859471630);
 }());

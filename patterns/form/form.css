@@ -1,7 +1,19 @@
-.title {
+legend {
   color: var(--color-primary);
 }
 
 label {
   color: var(--color-primary-light);
+}
+
+input {
+  color: #fff;
+  background-color: var(--color-whatever);
+  border-color: var(--color-primary-light);
+}
+
+select {
+  color: #fff;
+  background-color: var(--color-whatever);
+  border-color: var(--color-primary-light);
 }
