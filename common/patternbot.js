@@ -348,9 +348,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library
- * @version 1520859471630
+ * @version 1520859633332
  */
-const patternManifest_1520859471630 = {
+const patternManifest_1520859633332 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -561,7 +561,7 @@ const patternManifest_1520859471630 = {
       "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/buttons",
       "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/cards",
       "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/footer",
-      "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/form",
+      "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/forms",
       "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/navigation"
     ],
     "pages": []
@@ -697,15 +697,15 @@ const patternManifest_1520859471630 = {
       "css": []
     },
     {
-      "name": "form",
-      "namePretty": "Form",
-      "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/form",
+      "name": "forms",
+      "namePretty": "Forms",
+      "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/forms",
       "html": [
         {
           "name": "email-form",
           "namePretty": "Email form",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/form/email-form.html",
-          "localPath": "patterns/form/email-form.html",
+          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/forms/email-form.html",
+          "localPath": "patterns/forms/email-form.html",
           "readme": {
             "width": 400
           }
@@ -713,8 +713,8 @@ const patternManifest_1520859471630 = {
         {
           "name": "form",
           "namePretty": "Form",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/form/form.html",
-          "localPath": "patterns/form/form.html",
+          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/forms/form.html",
+          "localPath": "patterns/forms/form.html",
           "readme": {
             "width": 400
           }
@@ -722,8 +722,8 @@ const patternManifest_1520859471630 = {
         {
           "name": "list-form",
           "namePretty": "List form",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/form/list-form.html",
-          "localPath": "patterns/form/list-form.html",
+          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/forms/list-form.html",
+          "localPath": "patterns/forms/list-form.html",
           "readme": {
             "width": 400
           }
@@ -731,8 +731,8 @@ const patternManifest_1520859471630 = {
         {
           "name": "phone-form",
           "namePretty": "Phone form",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/form/phone-form.html",
-          "localPath": "patterns/form/phone-form.html",
+          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/forms/phone-form.html",
+          "localPath": "patterns/forms/phone-form.html",
           "readme": {
             "width": 400
           }
@@ -742,16 +742,16 @@ const patternManifest_1520859471630 = {
         {
           "name": "readme",
           "namePretty": "Readme",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/form/README.md",
-          "localPath": "patterns/form/README.md"
+          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/forms/README.md",
+          "localPath": "patterns/forms/README.md"
         }
       ],
       "css": [
         {
           "name": "form",
           "namePretty": "Form",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/form/form.css",
-          "localPath": "patterns/form/form.css"
+          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/forms/form.css",
+          "localPath": "patterns/forms/form.css"
         }
       ]
     },
@@ -806,5 +806,5 @@ const patternManifest_1520859471630 = {
   }
 };
 
-patternBotIncludes(patternManifest_1520859471630);
+patternBotIncludes(patternManifest_1520859633332);
 }());

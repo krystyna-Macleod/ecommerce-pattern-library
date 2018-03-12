@@ -1,10 +1,13 @@
 ---
+forms:
+  desc: |
+      Always should be on white background and add basic button at the end of form.
 email-form:
   width: 400
 
 form:
   desc: |
-    Always should be on white background and add basic button at the end of form.
+
   width: 400
 
 list-form:
