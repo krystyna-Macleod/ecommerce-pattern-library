@@ -1,0 +1,7 @@
+.nav-base {
+  background-color: #fff;
+}
+
+a {
+  color: var(--colour-primary);
+}
