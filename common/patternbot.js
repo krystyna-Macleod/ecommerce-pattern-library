@@ -348,9 +348,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library
- * @version 1520816924765
+ * @version 1520856500714
  */
-const patternManifest_1520816924765 = {
+const patternManifest_1520856500714 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -557,14 +557,51 @@ const patternManifest_1520816924765 = {
       "size64Local": "logo-64.svg"
     },
     "patterns": [
+      "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner",
       "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/buttons",
       "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/cards",
+      "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/footer",
       "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/form",
       "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/navigation"
     ],
     "pages": []
   },
   "userPatterns": [
+    {
+      "name": "banner",
+      "namePretty": "Banner",
+      "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner",
+      "html": [
+        {
+          "name": "banner-dark",
+          "namePretty": "Banner dark",
+          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner/banner-dark.html",
+          "localPath": "patterns/banner/banner-dark.html"
+        },
+        {
+          "name": "banner",
+          "namePretty": "Banner",
+          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner/banner.html",
+          "localPath": "patterns/banner/banner.html"
+        }
+      ],
+      "md": [
+        {
+          "name": "readme",
+          "namePretty": "Readme",
+          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner/README.md",
+          "localPath": "patterns/banner/README.md"
+        }
+      ],
+      "css": [
+        {
+          "name": "banner",
+          "namePretty": "Banner",
+          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner/banner.css",
+          "localPath": "patterns/banner/banner.css"
+        }
+      ]
+    },
     {
       "name": "buttons",
       "namePretty": "Buttons",
@@ -638,6 +675,28 @@ const patternManifest_1520816924765 = {
       ]
     },
     {
+      "name": "footer",
+      "namePretty": "Footer",
+      "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/footer",
+      "html": [
+        {
+          "name": "footer",
+          "namePretty": "Footer",
+          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/footer/footer.html",
+          "localPath": "patterns/footer/footer.html"
+        }
+      ],
+      "md": [
+        {
+          "name": "readme",
+          "namePretty": "Readme",
+          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/footer/README.md",
+          "localPath": "patterns/footer/README.md"
+        }
+      ],
+      "css": []
+    },
+    {
       "name": "form",
       "namePretty": "Form",
       "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/form",
@@ -702,6 +761,12 @@ const patternManifest_1520816924765 = {
       "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/navigation",
       "html": [
         {
+          "name": "navigation-dark",
+          "namePretty": "Navigation dark",
+          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/navigation/navigation-dark.html",
+          "localPath": "patterns/navigation/navigation-dark.html"
+        },
+        {
           "name": "navigation",
           "namePretty": "Navigation",
           "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/navigation/navigation.html",
@@ -747,5 +812,5 @@ const patternManifest_1520816924765 = {
   }
 };
 
-patternBotIncludes(patternManifest_1520816924765);
+patternBotIncludes(patternManifest_1520856500714);
 }());

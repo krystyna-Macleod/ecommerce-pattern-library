@@ -3,5 +3,10 @@
 }
 
 a {
-  color: var(--colour-primary);
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.nav-base-dark {
+  background-color: var(--color-primary)
 }
