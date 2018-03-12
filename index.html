@@ -197,6 +197,16 @@
                   </div>
                 </a>
               </li>
+              <li role="presentation">
+                <a class="gutter pad-t-1-4 pad-b-1-4 block" role="tab" aria-controls="section" href="#section">
+                  <div class="relative">
+                    <span>Section</span>
+                    <i class="icon i-18 absolute pin-cr">
+                      <svg><use xlink:href="#icon-active" /></svg>
+                    </i>
+                  </div>
+                </a>
+              </li>
           <li class="pad-t-1-2" role="presentation">
             <button class="nav-show-all gutter pad-t-1-4 pad-b-1-4 block kilo" id="nav-show-all" aria-pressed="false" title="Show all patterns" aria-label="Show all patterns">
               <span class="nav-show-all-wrap relative block">Show all</span>
@@ -764,42 +774,35 @@
     <h2 class="pattern-name exa push-1-4" style="color: #582c4d; font-family: &quot;Lora&quot;, serif;">Banner</h2>
       <nav class="pattern-nav">
         <ol class="list-group-inline push-1-4 pad-b-1-4">
-            <li><a href="#banner--banner-text">Banner text</a></li>
+            <li><a href="#banner--banner-dark">Banner dark</a></li>
             <li><a href="#banner--banner">Banner</a></li>
         </ol>
       </nav>
   </div>
 
-    <div class="pattern-desc milli island" >
-      <div class="max-length"><hr>
-<p>banner-text:
-  desc: |
-    This is banner/selection for how the text is meant to look like.</p>
-</div>
-    </div>
 
   
 
-    <div class="pattern-details " id="banner--banner-text" style="">
+    <div class="pattern-details " id="banner--banner-dark" style="">
         <div class="pattern-toolbar pattern-toolbar-inner relative gutter pad-t-1-4 pad-b-1-4" style="">
-          <h3 class="pattern-name tera push-1-8">Banner text</h3>
+          <h3 class="pattern-name tera push-1-8">Banner dark</h3>
             <ul class="list-group-inline gutter absolute pin-cr">
                 <li>
-                  <button class="center-contents-vertical pattern-tool-btn pattern-code-btn" title="Show code" aria-label="Show code" aria-pressed="false" aria-controls="banner-banner-text-code-sample">
+                  <button class="center-contents-vertical pattern-tool-btn pattern-code-btn" title="Show code" aria-label="Show code" aria-pressed="false" aria-controls="banner-banner-dark-code-sample">
                     <i class="icon i-18">
                       <svg><use xlink:href="#icon-code"></use></svg>
                     </i>
                   </button>
                 </li>
                 <li>
-                  <button class="center-contents-vertical pattern-tool-btn pattern-include-btn" title="Copy include" aria-label="Copy include" data-copy-include-pattern="banner/banner-text" hidden>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-include-btn" title="Copy include" aria-label="Copy include" data-copy-include-pattern="banner/banner-dark" hidden>
                     <i class="icon i-18">
                       <svg><use xlink:href="#icon-copy"></use></svg>
                     </i>
                   </button>
                 </li>
                 <li>
-                  <a class="btn center-contents-vertical pattern-tool-btn pattern-pop-btn" href="patterns/banner/banner-text.html" target="_blank" title="Open pattern in a new tab" aria-label="Open pattern in a new tab">
+                  <a class="btn center-contents-vertical pattern-tool-btn pattern-pop-btn" href="patterns/banner/banner-dark.html" target="_blank" title="Open pattern in a new tab" aria-label="Open pattern in a new tab">
                     <i class="icon i-18">
                       <svg><use xlink:href="#icon-pop-out"></use></svg>
                     </i>
@@ -812,7 +815,7 @@
         <div class="gutter-2 pad-t-1-2 pad-b-1-2">
           <div class="resizeable-pattern relative" style="">
             <i class="icon i-32 patternbot-iframe-loading-gears absolute pin-c"><svg><use xlink:href="#patternbot-iframe-loading-gears"></use></svg></i>
-            <iframe data-src="patterns/banner/banner-text.html" scrolling="no" onload="resizeIframe(this)" data-inject-css=" " ></iframe>
+            <iframe data-src="patterns/banner/banner-dark.html" scrolling="no" onload="resizeIframe(this)" data-inject-css=" " ></iframe>
               <div class="resizeable-pattern-length">
                 <div class="resize-handle resize-handle-left" style="">
                   <i class="icon i-18">
@@ -828,26 +831,23 @@
           </div>
         </div>
 
-          <div class="pattern-code-wrap gutter pad-t-1-2 pad-b-1-2" hidden aria-hidden="true" id="banner-banner-text-code-sample" tabindex="-1">
+          <div class="pattern-code-wrap gutter pad-t-1-2 pad-b-1-2" hidden aria-hidden="true" id="banner-banner-dark-code-sample" tabindex="-1">
             <div class="pattern-code relative milli island-1-2" style="">
-              <button class="center-contents-vertical pattern-tool-btn pattern-copy-btn absolute pin-tr" title="Copy code" aria-label="Copy code" data-clipboard-target="#banner-banner-text-code-sample-copy-chunk" hidden>
+              <button class="center-contents-vertical pattern-tool-btn pattern-copy-btn absolute pin-tr" title="Copy code" aria-label="Copy code" data-clipboard-target="#banner-banner-dark-code-sample-copy-chunk" hidden>
                 <i class="icon i-18">
                   <svg><use xlink:href="#icon-copy"></use></svg>
                 </i>
               </button>
-              <code><pre id="banner-banner-text-code-sample-copy-chunk">&lt;section class="wrapper"&gt;
+              <code><pre id="banner-banner-dark-code-sample-copy-chunk">&lt;section class="wrapper banner-dark"&gt;
   &lt;div class="gutter-1-2 text-center">
     &lt;h2 class="push-1-4 giga">This is a Banner&lt;/h2>
     &lt;p class="kilo push-1-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.&lt;/p>
   &lt;/div>
 
-  &lt;div class="grid">
-    &lt;div class="unit xs-1 s-1 m-1-2 l-1-2 gutter-1-2">
-      &lt;p class="milli text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>
-    &lt;/div>
-    &lt;div class="unit xs-1 s-1 m-1-2 l-1-2 gutter-1-2">
-      &lt;p class="milli text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>
-    &lt;/div>
+  &lt;div class="text-center">
+    &lt;i class="icon i-128 push-1-2">
+        &lt;svg>&lt;use xlink:href="../../images/icons.svg#candle"/>&lt;/svg>
+      &lt;/i>
   &lt;/div>
 
 &lt;/section>
@@ -911,7 +911,19 @@
                   <svg><use xlink:href="#icon-copy"></use></svg>
                 </i>
               </button>
-              <code><pre id="banner-banner-code-sample-copy-chunk">
+              <code><pre id="banner-banner-code-sample-copy-chunk">&lt;section class="wrapper"&gt;
+  &lt;div class="gutter-1-2 text-center">
+    &lt;h2 class="push-1-4 giga">This is a Banner&lt;/h2>
+    &lt;p class="kilo push-1-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.&lt;/p>
+  &lt;/div>
+
+  &lt;div class="text-center">
+    &lt;i class="icon i-128 push-1-2">
+        &lt;svg>&lt;use xlink:href="../../images/icons.svg#candle"/>&lt;/svg>
+      &lt;/i>
+  &lt;/div>
+
+&lt;/section>
 </pre></code>
             </div>
           </div>
@@ -1670,6 +1682,94 @@
     &lt;/nav>
   &lt;/div>
 &lt;/div>
+</pre></code>
+            </div>
+          </div>
+      </div>
+    </div>
+
+</section>
+
+        <section class="pattern" id="section" role="tabpanel" hidden aria-hidden="true" style="">
+  <div class="pattern-toolbar gutter pad-t-1-4 pad-b-1-8 relative" style="">
+    <h2 class="pattern-name exa push-1-4" style="color: #582c4d; font-family: &quot;Lora&quot;, serif;">Section</h2>
+        <ul class="list-group-inline gutter absolute pin-cr">
+            <li>
+              <button class="center-contents-vertical pattern-tool-btn pattern-code-btn" title="Show code" aria-label="Show code" aria-pressed="false" aria-controls="section-section-code-sample">
+                <i class="icon i-18">
+                  <svg><use xlink:href="#icon-code"></use></svg>
+                </i>
+              </button>
+            </li>
+            <li>
+              <button class="center-contents-vertical pattern-tool-btn pattern-include-btn" title="Copy include" aria-label="Copy include" data-copy-include-pattern="section/section" hidden>
+                <i class="icon i-18">
+                  <svg><use xlink:href="#icon-copy"></use></svg>
+                </i>
+              </button>
+            </li>
+            <li>
+              <a class="center-contents-vertical pattern-tool-btn pattern-pop-btn" href="patterns/section/section.html" target="_blank" title="Open pattern in a new tab" aria-label="Open pattern in a new tab">
+                <i class="icon i-18">
+                  <svg><use xlink:href="#icon-pop-out"></use></svg>
+                </i>
+              </a>
+            </li>
+        </ul>
+  </div>
+
+      <div class="pattern-desc milli island" style="">
+        <div class="max-length"><p>This is the section to be used for when you have a lot of text content.</p>
+</div>
+      </div>
+
+  
+
+    <div class="pattern-details " id="section--section" style="">
+
+      <div class="pattern-examples pad-t-1-2 pad-b-1-2" style="">
+        <div class="gutter-2 pad-t-1-2 pad-b-1-2">
+          <div class="resizeable-pattern relative" style="">
+            <i class="icon i-32 patternbot-iframe-loading-gears absolute pin-c"><svg><use xlink:href="#patternbot-iframe-loading-gears"></use></svg></i>
+            <iframe data-src="patterns/section/section.html" scrolling="no" onload="resizeIframe(this)" data-inject-css=" " ></iframe>
+              <div class="resizeable-pattern-length">
+                <div class="resize-handle resize-handle-left" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+                <div class="resize-handle resize-handle-right" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+              </div>
+          </div>
+        </div>
+
+          <div class="pattern-code-wrap gutter pad-t-1-2 pad-b-1-2" hidden aria-hidden="true" id="section-section-code-sample" tabindex="-1">
+            <div class="pattern-code relative milli island-1-2" style="">
+              <button class="center-contents-vertical pattern-tool-btn pattern-copy-btn absolute pin-tr" title="Copy code" aria-label="Copy code" data-clipboard-target="#section-section-code-sample-copy-chunk" hidden>
+                <i class="icon i-18">
+                  <svg><use xlink:href="#icon-copy"></use></svg>
+                </i>
+              </button>
+              <code><pre id="section-section-code-sample-copy-chunk">&lt;section class="wrapper"&gt;
+  &lt;div class="gutter-1-2 text-center">
+    &lt;h2 class="push-1-4 giga">This is a Banner&lt;/h2>
+    &lt;p class="kilo push-1-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.&lt;/p>
+  &lt;/div>
+
+  &lt;div class="grid">
+    &lt;div class="unit xs-1 s-1 m-1-2 l-1-2 gutter-1-2">
+      &lt;p class="milli text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>
+    &lt;/div>
+    &lt;div class="unit xs-1 s-1 m-1-2 l-1-2 gutter-1-2">
+      &lt;p class="milli text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>
+    &lt;/div>
+  &lt;/div>
+
+&lt;/section>
 </pre></code>
             </div>
           </div>

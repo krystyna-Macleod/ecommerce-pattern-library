@@ -348,9 +348,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library
- * @version 1520861695851
+ * @version 1520862434648
  */
-const patternManifest_1520861695851 = {
+const patternManifest_1520862434648 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -562,7 +562,8 @@ const patternManifest_1520861695851 = {
       "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/cards",
       "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/footer",
       "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/forms",
-      "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/navigation"
+      "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/navigation",
+      "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/section"
     ],
     "pages": []
   },
@@ -573,10 +574,10 @@ const patternManifest_1520861695851 = {
       "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner",
       "html": [
         {
-          "name": "banner-text",
-          "namePretty": "Banner text",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner/banner-text.html",
-          "localPath": "patterns/banner/banner-text.html"
+          "name": "banner-dark",
+          "namePretty": "Banner dark",
+          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner/banner-dark.html",
+          "localPath": "patterns/banner/banner-dark.html"
         },
         {
           "name": "banner",
@@ -784,6 +785,36 @@ const patternManifest_1520861695851 = {
           "localPath": "patterns/navigation/navigation.css"
         }
       ]
+    },
+    {
+      "name": "section",
+      "namePretty": "Section",
+      "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/section",
+      "html": [
+        {
+          "name": "section",
+          "namePretty": "Section",
+          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/section/section.html",
+          "localPath": "patterns/section/section.html",
+          "readme": {}
+        }
+      ],
+      "md": [
+        {
+          "name": "readme",
+          "namePretty": "Readme",
+          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/section/README.md",
+          "localPath": "patterns/section/README.md"
+        }
+      ],
+      "css": [
+        {
+          "name": "section",
+          "namePretty": "Section",
+          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/section/section.css",
+          "localPath": "patterns/section/section.css"
+        }
+      ]
     }
   ],
   "config": {
@@ -806,5 +837,5 @@ const patternManifest_1520861695851 = {
   }
 };
 
-patternBotIncludes(patternManifest_1520861695851);
+patternBotIncludes(patternManifest_1520862434648);
 }());
