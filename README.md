@@ -30,4 +30,4 @@ colors:
     The whatever colour is used for the button text.
 ---
 
-This is the company introduction - Candle Life bring you amazing candles that can brighten up your home and make it smell better as well.
+Candle Life bring you amazing candles that can brighten up your home and make it smell better as well.

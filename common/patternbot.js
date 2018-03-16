@@ -388,9 +388,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library
- * @version 1520863826840
+ * @version 1521222841279
  */
-const patternManifest_1520863826840 = {
+const patternManifest_1521222841279 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -561,15 +561,20 @@ const patternManifest_1520863826840 = {
           "opposite": 255
         }
       },
-      "bodyRaw": "\nThis is the company introduction - Candle Life bring you amazing candles that can brighten up your home and make it smell better as well.\n",
-      "bodyBasic": "This is the company introduction - Candle Life bring you amazing candles that can brighten up your home and make it smell better as well."
+      "bodyRaw": "\nCandle Life bring you amazing candles that can brighten up your home and make it smell better as well.\n",
+      "bodyBasic": "Candle Life bring you amazing candles that can brighten up your home and make it smell better as well."
     },
     "icons": [
-      "cart",
+      "candle-2",
       "banner",
+      "candle-1",
+      "candle-3",
+      "candle-4",
       "candle",
-      "facebook",
+      "cart",
       "instagram",
+      "facebook",
+      "toggle",
       "search",
       "twitter"
     ],
@@ -605,7 +610,6 @@ const patternManifest_1520863826840 = {
       "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/footer",
       "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/forms",
       "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/header",
-      "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/navigation",
       "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/section"
     ],
     "pages": []
@@ -835,36 +839,6 @@ const patternManifest_1520863826840 = {
       ]
     },
     {
-      "name": "navigation",
-      "namePretty": "Navigation",
-      "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/navigation",
-      "html": [
-        {
-          "name": "navigation",
-          "namePretty": "Navigation",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/navigation/navigation.html",
-          "localPath": "patterns/navigation/navigation.html",
-          "readme": {}
-        }
-      ],
-      "md": [
-        {
-          "name": "readme",
-          "namePretty": "Readme",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/navigation/README.md",
-          "localPath": "patterns/navigation/README.md"
-        }
-      ],
-      "css": [
-        {
-          "name": "navigation",
-          "namePretty": "Navigation",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/navigation/navigation.css",
-          "localPath": "patterns/navigation/navigation.css"
-        }
-      ]
-    },
-    {
       "name": "section",
       "namePretty": "Section",
       "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/section",
@@ -915,5 +889,5 @@ const patternManifest_1520863826840 = {
   }
 };
 
-patternBotIncludes(patternManifest_1520863826840);
+patternBotIncludes(patternManifest_1521222841279);
 }());
