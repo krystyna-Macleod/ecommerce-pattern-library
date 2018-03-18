@@ -1,4 +1,6 @@
 ---
+cards: |
+  These are the the type of cards you will be using.
 light-card:
   desc: |
     light card is used on dark background and should have an image with it.

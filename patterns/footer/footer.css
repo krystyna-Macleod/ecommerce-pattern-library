@@ -1,0 +1,8 @@
+.footer-color {
+  background-color: var(--color-secondary);
+  color: var(--color-primay);
+}
+
+.nav-color {
+  color: var(--color-accent);
+}
