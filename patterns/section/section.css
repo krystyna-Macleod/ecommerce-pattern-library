@@ -1,0 +1,7 @@
+.sub-title{
+  color: var(--color-secondary);
+}
+
+.paragraph-1 .paragraph-2 {
+  color: var(--color-neutral);
+}
