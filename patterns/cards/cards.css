@@ -10,7 +10,7 @@
 .light-card {
   border: 2px solid var(--color-nuetral);
   border-radius: 10px;
-  color: var(--color-primary-light);
+  color: var(--color-neutral);
 
   background-color: #fff;
   box-shadow: 3px 3px 15px #000;
