@@ -7,6 +7,6 @@
   color: var(--color-accent);
 }
 
-p {
+.footer-text {
   color: var(--color-whatever);
 }
