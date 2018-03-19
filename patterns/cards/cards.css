@@ -19,3 +19,7 @@
 .colour-heading {
   color: var(--color-primary);
 }
+
+.light-text {
+  color: var(--color-nuetral);
+}
