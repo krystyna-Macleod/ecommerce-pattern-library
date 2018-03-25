@@ -388,9 +388,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library
- * @version 1522006072801
+ * @version 1522007251576
  */
-const patternManifest_1522006072801 = {
+const patternManifest_1522007251576 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -766,37 +766,31 @@ const patternManifest_1522006072801 = {
           "name": "email-form",
           "namePretty": "Email form",
           "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/forms/email-form.html",
-          "localPath": "patterns/forms/email-form.html",
-          "readme": {
-            "width": 400
-          }
+          "localPath": "patterns/forms/email-form.html"
         },
         {
           "name": "form",
           "namePretty": "Form",
           "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/forms/form.html",
-          "localPath": "patterns/forms/form.html",
-          "readme": {
-            "width": 400
-          }
+          "localPath": "patterns/forms/form.html"
         },
         {
           "name": "list-form",
           "namePretty": "List form",
           "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/forms/list-form.html",
-          "localPath": "patterns/forms/list-form.html",
-          "readme": {
-            "width": 400
-          }
+          "localPath": "patterns/forms/list-form.html"
         },
         {
           "name": "phone-form",
           "namePretty": "Phone form",
           "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/forms/phone-form.html",
-          "localPath": "patterns/forms/phone-form.html",
-          "readme": {
-            "width": 400
-          }
+          "localPath": "patterns/forms/phone-form.html"
+        },
+        {
+          "name": "quantity-form",
+          "namePretty": "Quantity form",
+          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/forms/quantity-form.html",
+          "localPath": "patterns/forms/quantity-form.html"
         }
       ],
       "md": [
@@ -902,5 +896,5 @@ const patternManifest_1522006072801 = {
   }
 };
 
-patternBotIncludes(patternManifest_1522006072801);
+patternBotIncludes(patternManifest_1522007251576);
 }());
