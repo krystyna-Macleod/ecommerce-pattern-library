@@ -388,9 +388,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library
- * @version 1522065947623
+ * @version 1522066424053
  */
-const patternManifest_1522065947623 = {
+const patternManifest_1522066424052 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -636,6 +636,18 @@ const patternManifest_1522065947623 = {
           "namePretty": "Banner dark",
           "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner/banner-dark.html",
           "localPath": "patterns/banner/banner-dark.html"
+        },
+        {
+          "name": "banner-no-btn-dark",
+          "namePretty": "Banner no btn dark",
+          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner/banner-no-btn-dark.html",
+          "localPath": "patterns/banner/banner-no-btn-dark.html"
+        },
+        {
+          "name": "banner-no-button",
+          "namePretty": "Banner no button",
+          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner/banner-no-button.html",
+          "localPath": "patterns/banner/banner-no-button.html"
         },
         {
           "name": "banner",
@@ -901,5 +913,5 @@ const patternManifest_1522065947623 = {
   }
 };
 
-patternBotIncludes(patternManifest_1522065947623);
+patternBotIncludes(patternManifest_1522066424052);
 }());
