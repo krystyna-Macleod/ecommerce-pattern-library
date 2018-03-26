@@ -16,6 +16,10 @@
   box-shadow: 3px 3px 15px #000;
 }
 
+.light-card {
+  color: var(--color-accent);
+}
+
 .colour-heading {
   color: var(--color-primary);
 }
