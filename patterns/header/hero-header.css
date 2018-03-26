@@ -13,8 +13,25 @@ a {
   padding: .2em;
 }
 
+a:hover {
+  color: var(--color-secondary);
+  font-weight: bolder;
+}
+
+.a-dark:hover {
+  color: var(--color-secondary);
+  background-color: #fff;
+  border-radius: 5px;
+  padding: .5em;
+  font-weight: bolder;
+}
+
 .logo-dark {
   background-color: #fff;
   border-radius: 10px;
   padding: 1em;
+}
+
+.home-page, .product-list, .check-out-page {
+  color: var(--color-secondary);;
 }
