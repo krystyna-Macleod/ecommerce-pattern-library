@@ -31,3 +31,16 @@ a:hover {
   border-radius: 10px;
   padding: 1em;
 }
+
+.current {
+  color: var(--color-secondary);
+  font-weight: bolder;
+}
+
+.current:hover {
+  color: var(--color-secondary);
+  background-color: #fff;
+  border-radius: 5px;
+  padding: .5em;
+  font-weight: bolder;
+}
