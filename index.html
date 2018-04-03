@@ -1035,9 +1035,9 @@
     &lt;p class="kilo push-1-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.&lt;/p>
   &lt;/div>
 
-  &lt;div class="text-center push-1-2 pad-b-1-2">
-    &lt;i class="icon i-96 push-1-2">
-        &lt;svg>&lt;use xlink:href="../../images/icons.svg#candle"/>&lt;/svg>
+  &lt;div class="text-center push-1-2 pad-b-1-4">
+    &lt;i class="icon i-256 push-1-2">
+        &lt;svg>&lt;use xlink:href="../../images/icons.svg#banner"/>&lt;/svg>
       &lt;/i>
   &lt;/div>
 
@@ -1485,6 +1485,7 @@
     <h2 class="pattern-name exa push-1-4" style="color: #582c4d; font-family: &quot;Lora&quot;, serif;">Forms</h2>
       <nav class="pattern-nav">
         <ol class="list-group-inline push-1-4 pad-b-1-4">
+            <li><a href="#forms--address-form">Address form</a></li>
             <li><a href="#forms--email-form">Email form</a></li>
             <li><a href="#forms--form">Form</a></li>
             <li><a href="#forms--list-form">List form</a></li>
@@ -1497,6 +1498,79 @@
 
   
 
+    <div class="pattern-details " id="forms--address-form" style="">
+        <div class="pattern-toolbar pattern-toolbar-inner relative gutter pad-t-1-4 pad-b-1-4" style="">
+          <h3 class="pattern-name tera push-1-8">Address form</h3>
+            <ul class="list-group-inline gutter absolute pin-cr">
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-code-btn" title="Show code" aria-label="Show code" aria-pressed="false" aria-controls="forms-address-form-code-sample">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-code"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-include-btn" title="Copy include" aria-label="Copy include" data-copy-include-pattern="forms/address-form" hidden>
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-copy"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <a class="btn center-contents-vertical pattern-tool-btn pattern-pop-btn" href="patterns/forms/address-form.html" target="_blank" title="Open pattern in a new tab" aria-label="Open pattern in a new tab">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-pop-out"></use></svg>
+                    </i>
+                  </a>
+                </li>
+            </ul>
+        </div>
+
+      <div class="pattern-examples pad-t-1-2 pad-b-1-2" style="">
+        <div class="gutter-2 pad-t-1-2 pad-b-1-2">
+          <div class="resizeable-pattern relative" style="">
+            <i class="icon i-32 patternbot-iframe-loading-gears absolute pin-c"><svg><use xlink:href="#patternbot-iframe-loading-gears"></use></svg></i>
+            <iframe data-src="patterns/forms/address-form.html" scrolling="no" data-inject-css=" " ></iframe>
+              <div class="resizeable-pattern-length">
+                <div class="resize-handle resize-handle-left" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+                <div class="resize-handle resize-handle-right" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+              </div>
+          </div>
+        </div>
+
+          <div class="pattern-code-wrap gutter pad-t-1-2 pad-b-1-2" hidden aria-hidden="true" id="forms-address-form-code-sample" tabindex="-1">
+            <div class="pattern-code relative milli island-1-2" style="">
+              <button class="center-contents-vertical pattern-tool-btn pattern-copy-btn absolute pin-tr" title="Copy code" aria-label="Copy code" data-clipboard-target="#forms-address-form-code-sample-copy-chunk" hidden>
+                <i class="icon i-18">
+                  <svg><use xlink:href="#icon-copy"></use></svg>
+                </i>
+              </button>
+              <code><pre id="forms-address-form-code-sample-copy-chunk">&lt;section&gt;
+
+  &lt;form>
+
+    &lt;div class="gutter-1-2 pad-t-1-2">
+      &lt;label class="pad-b-1-8" for="address">address&lt;/label>
+      &lt;input id="address" name="address">
+    &lt;/div>
+
+  &lt;/form>
+
+
+&lt;/section>
+</pre></code>
+            </div>
+          </div>
+      </div>
+    </div>
     <div class="pattern-details " id="forms--email-form" style="">
         <div class="pattern-toolbar pattern-toolbar-inner relative gutter pad-t-1-4 pad-b-1-4" style="">
           <h3 class="pattern-name tera push-1-8">Email form</h3>
@@ -1555,16 +1629,11 @@
               <code><pre id="forms-email-form-code-sample-copy-chunk">&lt;section&gt;
 
   &lt;form class="wrapper">
-    &lt;fieldset>
-      &lt;legend class="gutter-1-2 mega">Email&lt;/legend>
 
-      &lt;div class="gutter-1-2 push pad-b-1-4">
-        &lt;label for="email">Email&lt;/label>
-        &lt;input id="email" type="email">
-      &lt;/div>
-
-
-    &lt;/fieldset>
+    &lt;div class="gutter-1-2 push pad-b-1-4">
+      &lt;label for="email">Email&lt;/label>
+      &lt;input id="email" type="email">
+    &lt;/div>
 
   &lt;/form>
 
@@ -1634,7 +1703,7 @@
 
   &lt;form>
     &lt;fieldset>
-      &lt;legend class="gutter-1-2 mega">Name forms&lt;/legend>
+      &lt;legend class="gutter-1-2 mega name">Name forms&lt;/legend>
 
 
       &lt;div class="gutter-1-2 pad-t-1-2">
@@ -1710,32 +1779,28 @@
               </button>
               <code><pre id="forms-list-form-code-sample-copy-chunk">&lt;section&gt;
 
-  &lt;form class="wrapper">
+  &lt;form>
 
-    &lt;fieldset>
-      &lt;legend class="gutter-1-2 mega">List form&lt;/legend>
+    &lt;div class="gutter-1-2 push-1-2 pad-b">
+      &lt;label class="pad-b-1-8" for="province">Province&lt;/label>
+      &lt;select id="province">
+        &lt;option value="">Select a province&lt;/option>
+        &lt;option value="">Alberta&lt;/option>
+        &lt;option value="">British Columbia&lt;/option>
+        &lt;option value="">Manitoba&lt;/option>
+        &lt;option value="">New Brunswick&lt;/option>
+        &lt;option value="">Newfoundland &amp; Labrador&lt;/option>
+        &lt;option value="">Northwest Territories&lt;/option>
+        &lt;option value="">Nova Scotia&lt;/option>
+        &lt;option value="">Nunavut&lt;/option>
+        &lt;option value="">Ontario&lt;/option>
+        &lt;option value="">Prince Edward Island&lt;/option>
+        &lt;option value="">Qu&#xE9;bec&lt;/option>
+        &lt;option value="">Saskatchewan&lt;/option>
+        &lt;option value="">Yukon&lt;/option>
+      &lt;/select>
+    &lt;/div>
 
-      &lt;div class="unit xs-1 s-1 m-1-2 l-1-2 gutter-1-2 push-1-2 pad-b">
-        &lt;label class="pad-b-1-8" for="province">Province&lt;/label>
-        &lt;select id="province">
-          &lt;option value="">Select a province&lt;/option>
-          &lt;option value="">Alberta&lt;/option>
-          &lt;option value="">British Columbia&lt;/option>
-          &lt;option value="">Manitoba&lt;/option>
-          &lt;option value="">New Brunswick&lt;/option>
-          &lt;option value="">Newfoundland &amp; Labrador&lt;/option>
-          &lt;option value="">Northwest Territories&lt;/option>
-          &lt;option value="">Nova Scotia&lt;/option>
-          &lt;option value="">Nunavut&lt;/option>
-          &lt;option value="">Ontario&lt;/option>
-          &lt;option value="">Prince Edward Island&lt;/option>
-          &lt;option value="">Qu&#xE9;bec&lt;/option>
-          &lt;option value="">Saskatchewan&lt;/option>
-          &lt;option value="">Yukon&lt;/option>
-        &lt;/select>
-      &lt;/div>
-
-    &lt;/fieldset>
 
   &lt;/form>
 
@@ -1803,18 +1868,12 @@
               </button>
               <code><pre id="forms-phone-form-code-sample-copy-chunk">&lt;section&gt;
 
-  &lt;form class="wrapper">
+  &lt;form>
 
-    &lt;fieldset>
-      &lt;legend class="gutter-1-2 mega">Billing Information&lt;/legend>
-
-      &lt;div>
-        &lt;label for="tel">Phone number&lt;/label>
-        &lt;input id="tel" type="tel">
-      &lt;/div>
-
-
-    &lt;/fieldset>
+    &lt;div>
+      &lt;label for="tel">Phone number&lt;/label>
+      &lt;input id="tel" type="tel">
+    &lt;/div>
 
   &lt;/form>
 
@@ -1882,12 +1941,12 @@
               </button>
               <code><pre id="forms-quantity-form-code-sample-copy-chunk">&lt;section&gt;
 
-  &lt;form class="wrapper">
+  &lt;form>
 
     &lt;fieldset>
       &lt;legend class="gutter-1-2 mega">Quantity form&lt;/legend>
 
-      &lt;div class="unit xs-1 s-1 m-1-2 l-1-2 gutter-1-2 push-1-2 pad-b">
+      &lt;div class="gutter-1-2 push-1-2 pad-b">
         &lt;label class="pad-b-1-8" for="quantity">Quantity&lt;/label>
         &lt;select id="quantity">
           &lt;option value="">Select quantity of a items&lt;/option>
