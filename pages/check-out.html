@@ -19,21 +19,33 @@
       <div class="unit xs-1 s-1 m-1-2 l-1-2">
         <script type="application/json" data-pattern="forms/form">
           {
-            "legend" : "Billing Information",
-            "label" : "Full Name"
+            "legend": "Billing Information",
+            "label": "Full Name"
           }
         </script>
+        <script type="application/json" data-pattern="forms/address-form"></script>
         <script type="application/json" data-pattern="forms/list-form"></script>
         <script type="application/json" data-pattern="forms/email-form"></script>
         <script type="application/json" data-pattern="forms/phone-form"></script>
       </div>
       <div class="unit xs-1 s-1 m-1-2 l-1-2">
-        <script type="application/json" data-pattern="forms/quantity-form"></script>
+        <script type="application/json" data-pattern="forms/quantity-form">
+          {
+            "legend": "Product"
+          }
+        </script>
+        <div>
+          <i class="icon i-192"><svg><use xlink:href="images/icons.svg#candle"></use></svg></i>
+        </div>
       </div>
     </div>
 
     <div class="text-center">
-      <script type="application/json" data-pattern="buttons/buttons"></script>
+      <script type="application/json" data-pattern="buttons/buttons">
+        {
+          "btn": "Accept"
+        }
+      </script>
     </div>
   </main>
 
