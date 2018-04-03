@@ -388,9 +388,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library
- * @version 1522775213502
+ * @version 1522776096902
  */
-const patternManifest_1522775213502 = {
+const patternManifest_1522776096902 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -640,7 +640,15 @@ const patternManifest_1522775213502 = {
           "name": "banner-dark",
           "namePretty": "Banner dark",
           "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner/banner-dark.html",
-          "localPath": "patterns/banner/banner-dark.html"
+          "localPath": "patterns/banner/banner-dark.html",
+          "readme": {}
+        },
+        {
+          "name": "banner-light",
+          "namePretty": "Banner light",
+          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner/banner-light.html",
+          "localPath": "patterns/banner/banner-light.html",
+          "readme": {}
         },
         {
           "name": "banner-no-btn-dark",
@@ -652,13 +660,12 @@ const patternManifest_1522775213502 = {
           "name": "banner-no-button",
           "namePretty": "Banner no button",
           "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner/banner-no-button.html",
-          "localPath": "patterns/banner/banner-no-button.html"
-        },
-        {
-          "name": "banner",
-          "namePretty": "Banner",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner/banner.html",
-          "localPath": "patterns/banner/banner.html"
+          "localPath": "patterns/banner/banner-no-button.html",
+          "readme": {
+            "banner-no-btn-dark": {
+              "desc": "This banner has no button on it and has a bottom boarder if put with white section. This banner has no image.\n"
+            }
+          }
         }
       ],
       "md": [
@@ -924,5 +931,5 @@ const patternManifest_1522775213502 = {
   }
 };
 
-patternBotIncludes(patternManifest_1522775213502);
+patternBotIncludes(patternManifest_1522776096902);
 }());
