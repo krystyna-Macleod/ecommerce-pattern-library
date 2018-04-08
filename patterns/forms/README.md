@@ -24,4 +24,4 @@ phone-form:
     This is form is for how many they will need of the item.
   width: 400
 ---
-These forms are to be on
+These forms are to be on the check-out page.
