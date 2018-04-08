@@ -388,9 +388,9 @@ const patternBotIncludes = function (manifest) {
 /** 
  * Patternbot library manifest
  * /Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library
- * @version 1522776096902
+ * @version 1522783817310
  */
-const patternManifest_1522776096902 = {
+const patternManifest_1522783817310 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -654,18 +654,15 @@ const patternManifest_1522776096902 = {
           "name": "banner-no-btn-dark",
           "namePretty": "Banner no btn dark",
           "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner/banner-no-btn-dark.html",
-          "localPath": "patterns/banner/banner-no-btn-dark.html"
+          "localPath": "patterns/banner/banner-no-btn-dark.html",
+          "readme": {}
         },
         {
           "name": "banner-no-button",
           "namePretty": "Banner no button",
           "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner/banner-no-button.html",
           "localPath": "patterns/banner/banner-no-button.html",
-          "readme": {
-            "banner-no-btn-dark": {
-              "desc": "This banner has no button on it and has a bottom boarder if put with white section. This banner has no image.\n"
-            }
-          }
+          "readme": {}
         }
       ],
       "md": [
@@ -931,5 +928,5 @@ const patternManifest_1522776096902 = {
   }
 };
 
-patternBotIncludes(patternManifest_1522776096902);
+patternBotIncludes(patternManifest_1522783817310);
 }());

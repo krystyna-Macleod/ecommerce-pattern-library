@@ -13,3 +13,4 @@ basic-card:
   width: 400
   padding: '1em'
 ---
+These cards are used for the product to be displayed. The cards should always be shown in rolls of 3s in a large screen.

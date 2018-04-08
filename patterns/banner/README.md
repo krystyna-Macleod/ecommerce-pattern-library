@@ -8,7 +8,8 @@ banner-dark:
 banner-no-button:
   desc: |
     This banner has no button on it and has a bottom boarder if put with white section.
-  banner-no-btn-dark:
-    desc: |
-      This banner has no button on it and has a bottom boarder if put with white section. This banner has no image.
+banner-no-btn-dark:
+  desc: |
+    This banner has no button on it and has a bottom boarder if put with white section. This banner has no image.
 ---
+These are the banners that are to be used with the header. Each banner has role of different uses.
