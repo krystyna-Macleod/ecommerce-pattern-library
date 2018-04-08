@@ -1650,7 +1650,11 @@
 
     &lt;div class="gutter-1-2 push pad-b-1-4">
       &lt;label for="email">Email&lt;/label>
-      &lt;input id="email" type="email">
+      &lt;input id="email" type="email" required aria-describedby="email-error">
+      &lt;p class="error-message milli island-1-4 push-0" id="email-error">
+        &lt;i class="icon i-16">&lt;svg>&lt;use xlink:href="images/icons.svg#error"/>&lt;/svg>&lt;/i>
+        &lt;span class="icon-label">Please provide a properly formatted email address&lt;/span>
+      &lt;/p>
     &lt;/div>
 
   &lt;/form>
@@ -1725,7 +1729,7 @@
 
       &lt;div class="gutter-1-2">
         &lt;label class="pad-b-1-8" for="full-name">Full name&lt;/label>
-        &lt;input id="full-name" name="full-name">
+        &lt;input id="full-name" name="full-name" required>
       &lt;/div>
 
     &lt;/fieldset>
