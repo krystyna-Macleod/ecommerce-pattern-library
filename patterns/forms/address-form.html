@@ -19,7 +19,11 @@
 
       <div class="gutter-1-2">
         <label class="pad-b-1-8" for="address">address</label>
-        <input id="address" name="address">
+        <input id="address" name="address" required aria-describedby="email-error">
+        <p class="error-message milli island-1-4 push-0" id="email-error">
+          <i class="icon i-16"><svg><use xlink:href="images/icons.svg#error" /></svg></i>
+          <span class="icon-label">Please provide a properly formatted email address</span>
+        </p>
       </div>
 
     </form>

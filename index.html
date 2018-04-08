@@ -1577,7 +1577,11 @@
 
     &lt;div class="gutter-1-2">
       &lt;label class="pad-b-1-8" for="address">address&lt;/label>
-      &lt;input id="address" name="address">
+      &lt;input id="address" name="address" required aria-describedby="email-error">
+      &lt;p class="error-message milli island-1-4 push-0" id="email-error">
+        &lt;i class="icon i-16">&lt;svg>&lt;use xlink:href="images/icons.svg#error"/>&lt;/svg>&lt;/i>
+        &lt;span class="icon-label">Please provide a properly formatted email address&lt;/span>
+      &lt;/p>
     &lt;/div>
 
   &lt;/form>
@@ -1893,7 +1897,11 @@
 
     &lt;div class="gutter-1-2 push pad-b-1-4">
       &lt;label for="tel">Phone number&lt;/label>
-      &lt;input id="tel" type="tel">
+      &lt;input id="tel" type="tel" required aria-describedby="email-error">
+      &lt;p class="error-message milli island-1-4 push-0" id="email-error">
+        &lt;i class="icon i-16">&lt;svg>&lt;use xlink:href="images/icons.svg#error"/>&lt;/svg>&lt;/i>
+        &lt;span class="icon-label">Please provide a properly formatted email address&lt;/span>
+      &lt;/p>
     &lt;/div>
 
   &lt;/form>
