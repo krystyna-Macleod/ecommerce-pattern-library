@@ -9,3 +9,11 @@
 hr {
   color: var(--color-secondary);
 }
+
+h5 {
+  color: var(--color-primary);
+}
+
+h6 {
+  color: var(--color-primary-light);
+}
