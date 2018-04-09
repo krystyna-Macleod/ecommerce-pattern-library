@@ -2187,42 +2187,148 @@
 
 </section>
 
-        <section class="pattern" id="section" role="tabpanel" hidden aria-hidden="true" style="">
-  <div class="pattern-toolbar gutter pad-t-1-4 pad-b-1-8 relative" style="">
+        <section class="pattern" id="section" role="tabpanel" hidden aria-hidden="true" >
+  <div class="pattern-toolbar gutter pad-t-1-4 pad-b-1-8 relative" >
     <h2 class="pattern-name exa push-1-4" style="color: #582c4d; font-family: &quot;Lora&quot;, serif;">Section</h2>
-        <ul class="list-group-inline gutter absolute pin-cr">
-            <li>
-              <button class="center-contents-vertical pattern-tool-btn pattern-code-btn" title="Show code" aria-label="Show code" aria-pressed="false" aria-controls="section-section-code-sample">
-                <i class="icon i-18">
-                  <svg><use xlink:href="#icon-code"></use></svg>
-                </i>
-              </button>
-            </li>
-            <li>
-              <button class="center-contents-vertical pattern-tool-btn pattern-include-btn" title="Copy include" aria-label="Copy include" data-copy-include-pattern="section/section" hidden>
+      <nav class="pattern-nav">
+        <ol class="list-group-inline push-1-4 pad-b-1-4">
+            <li><a href="#section--product-details">Product details</a></li>
+            <li><a href="#section--section">Section</a></li>
+        </ol>
+      </nav>
+  </div>
+
+
+  
+
+    <div class="pattern-details " id="section--product-details" style="">
+        <div class="pattern-toolbar pattern-toolbar-inner relative gutter pad-t-1-4 pad-b-1-4" style="">
+          <h3 class="pattern-name tera push-1-8">Product details</h3>
+            <ul class="list-group-inline gutter absolute pin-cr">
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-code-btn" title="Show code" aria-label="Show code" aria-pressed="false" aria-controls="section-product-details-code-sample">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-code"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-include-btn" title="Copy include" aria-label="Copy include" data-copy-include-pattern="section/product-details" hidden>
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-copy"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <a class="btn center-contents-vertical pattern-tool-btn pattern-pop-btn" href="patterns/section/product-details.html" target="_blank" title="Open pattern in a new tab" aria-label="Open pattern in a new tab">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-pop-out"></use></svg>
+                    </i>
+                  </a>
+                </li>
+            </ul>
+        </div>
+
+      <div class="pattern-examples pad-t-1-2 pad-b-1-2" style="">
+        <div class="gutter-2 pad-t-1-2 pad-b-1-2">
+          <div class="resizeable-pattern relative" style="">
+            <i class="icon i-32 patternbot-iframe-loading-gears absolute pin-c"><svg><use xlink:href="#patternbot-iframe-loading-gears"></use></svg></i>
+            <iframe data-src="patterns/section/product-details.html" scrolling="no" data-inject-css=" " ></iframe>
+              <div class="resizeable-pattern-length">
+                <div class="resize-handle resize-handle-left" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+                <div class="resize-handle resize-handle-right" style="">
+                  <i class="icon i-18">
+                    <svg><use xlink:href="#icon-resize-handle" /></svg>
+                  </i>
+                </div>
+              </div>
+          </div>
+        </div>
+
+          <div class="pattern-code-wrap gutter pad-t-1-2 pad-b-1-2" hidden aria-hidden="true" id="section-product-details-code-sample" tabindex="-1">
+            <div class="pattern-code relative milli island-1-2" style="">
+              <button class="center-contents-vertical pattern-tool-btn pattern-copy-btn absolute pin-tr" title="Copy code" aria-label="Copy code" data-clipboard-target="#section-product-details-code-sample-copy-chunk" hidden>
                 <i class="icon i-18">
                   <svg><use xlink:href="#icon-copy"></use></svg>
                 </i>
               </button>
-            </li>
-            <li>
-              <a class="center-contents-vertical pattern-tool-btn pattern-pop-btn" href="patterns/section/section.html" target="_blank" title="Open pattern in a new tab" aria-label="Open pattern in a new tab">
-                <i class="icon i-18">
-                  <svg><use xlink:href="#icon-pop-out"></use></svg>
-                </i>
-              </a>
-            </li>
-        </ul>
-  </div>
+              <code><pre id="section-product-details-code-sample-copy-chunk">&lt;section class="grid wrapper"&gt;
 
-      <div class="pattern-desc milli island" style="">
-        <div class="max-length"><p>This is the section to be used for when you have a lot of text content.</p>
-</div>
+  &lt;div class="unit xs-1 s-1 m-1-2 l-1-2 text-center pad-t-1-2 gutter-1-2">
+    &lt;i class="icon i-128">
+        &lt;svg>&lt;use xlink:href="../../images/icons.svg#candle"/>&lt;/svg>
+      &lt;/i>
+  &lt;/div>
+
+  &lt;div class="unit xs-1 s-1 m-1-2 l-1-2 pad-t-1-2 gutter-1-2">
+    &lt;form>
+      &lt;fieldset class="push-1-4">
+        &lt;legend class="gutter-1-2 mega name">Name of Product&lt;/legend>
+
+        &lt;div class="gutter-1-2">
+          &lt;label class="pad-b-1-8" for="product-name">product name&lt;/label>
+          &lt;input id="product-name" name="product-name" required>
+        &lt;/div>
+
+        &lt;div class="gutter-1-2 push-1-2 pad-b">
+          &lt;label class="pad-b-1-8" for="quantity">Quantity&lt;/label>
+          &lt;select id="quantity">
+            &lt;option value="">Select quantity of a items&lt;/option>
+            &lt;option value="">1&lt;/option>
+            &lt;option value="">2&lt;/option>
+            &lt;option value="">3&lt;/option>
+            &lt;option value="">4&lt;/option>
+          &lt;/select>
+        &lt;/div>
+
+      &lt;/fieldset>
+
+    &lt;/form>
+
+  &lt;/div>
+&lt;/section>
+
+&lt;hr>
+</pre></code>
+            </div>
+          </div>
       </div>
-
-  
-
+    </div>
     <div class="pattern-details " id="section--section" style="">
+        <div class="pattern-toolbar pattern-toolbar-inner relative gutter pad-t-1-4 pad-b-1-4" style="">
+          <h3 class="pattern-name tera push-1-8">Section</h3>
+            <ul class="list-group-inline gutter absolute pin-cr">
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-code-btn" title="Show code" aria-label="Show code" aria-pressed="false" aria-controls="section-section-code-sample">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-code"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <button class="center-contents-vertical pattern-tool-btn pattern-include-btn" title="Copy include" aria-label="Copy include" data-copy-include-pattern="section/section" hidden>
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-copy"></use></svg>
+                    </i>
+                  </button>
+                </li>
+                <li>
+                  <a class="btn center-contents-vertical pattern-tool-btn pattern-pop-btn" href="patterns/section/section.html" target="_blank" title="Open pattern in a new tab" aria-label="Open pattern in a new tab">
+                    <i class="icon i-18">
+                      <svg><use xlink:href="#icon-pop-out"></use></svg>
+                    </i>
+                  </a>
+                </li>
+            </ul>
+        </div>
+          <div class="pattern-desc milli island" style="">
+            <div class="max-length"><p>This is the section to be used for when you have a lot of text content.</p>
+</div>
+          </div>
 
       <div class="pattern-examples pad-t-1-2 pad-b-1-2" style="">
         <div class="gutter-2 pad-t-1-2 pad-b-1-2">
