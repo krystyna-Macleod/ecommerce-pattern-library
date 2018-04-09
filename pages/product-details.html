@@ -2,11 +2,55 @@
 <html lang="en-ca">
 <head>
   <meta charset="utf-8">
-  <title>Candle Life - Product List</title>
+  <title>Candle Life - Product Details</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <script src="../common/patternbot.js"></script>
 </head>
 <body>
-
+  <script type="application/json" data-pattern="header/hero-header"></script>
+  <script type="application/json" data-pattern="banner/banner-dark"></script>
+    <div class="pad-t-2 pad-b-1-2 gutter grid">
+      <div class="gutter-1-2 unit xs-1 s-1 m-1-2 l-1-4 xl-1-4">
+        <script type="application/json" data-pattern="cards/light-card">
+          {
+            "use[xlink:href]": "../images/icons.svg#candle-2",
+            "h3": "Twisted Candles",
+            "p": "Candles that are twisted with different scents to make something new.",
+            ".btn": "More Twisted"
+          }
+        </script>
+      </div>
+      <div class="gutter-1-2 unit xs-1 s-1 m-1-2 l-1-4 xl-1-4">
+        <script type="application/json" data-pattern="cards/light-card">
+          {
+            "use[xlink:href]": "../images/icons.svg#candle-2",
+            "h3": "Twisted Candles",
+            "p": "Candles that are twisted with different scents to make something new.",
+            ".btn": "More Twisted"
+          }
+        </script>
+      </div>
+      <div class="gutter-1-2 unit xs-1 s-1 m-1-2 l-1-4 xl-1-4">
+        <script type="application/json" data-pattern="cards/light-card">
+          {
+            "use[xlink:href]": "../images/icons.svg#candle-3",
+            "h3": "Homecooking",
+            "p": "Candles that remind you of homecooking, like gong to grandma's house.",
+            ".btn": "More Homecooking"
+          }
+        </script>
+      </div>
+      <div class="gutter-1-2 unit xs-1 s-1 m-1-2 l-1-4 xl-1-4">
+        <script type="application/json" data-pattern="cards/light-card">
+          {
+            "use[xlink:href]": "../images/icons.svg#candle-4",
+            "h3": "Holiday",
+            "p": "Our Holiday specials focus around whatever holiday we are nears.",
+            ".btn": "More Holiday"
+          }
+        </script>
+      </div>
+    </div>
+  <script type="application/json" data-pattern="footer/footer"></script>
 </body>
 </html>

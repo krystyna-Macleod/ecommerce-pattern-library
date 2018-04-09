@@ -86,11 +86,17 @@ const patternBotIncludes = function (manifest) {
     `},
   };
 
+  let jsFileQueue = {
+    sync: [],
+    async: [],
+  };
   let downloadedAssets = {};
 
   const downloadHandler = function (e) {
+    const id = (e.target.hasAttribute('src')) ? e.target.getAttribute('src') : e.target.getAttribute('href');
+
     e.target.removeEventListener('load', downloadHandler);
-    downloadedAssets[e.target.getAttribute('href')] = true;
+    downloadedAssets[id] = true;
   };
 
   const findRootPath = function () {
@@ -115,7 +121,7 @@ const patternBotIncludes = function (manifest) {
     newLink.addEventListener('load', downloadHandler);
 
     document.head.appendChild(newLink);
-  }
+  };
 
   const bindAllCssFiles = function (rootPath) {
     if (manifest.commonInfo && manifest.commonInfo.readme && manifest.commonInfo.readme.attributes &&  manifest.commonInfo.readme.attributes.fontUrl) {
@@ -136,6 +142,54 @@ const patternBotIncludes = function (manifest) {
         addCssFile(`../${css.localPath}`);
       });
     });
+  };
+
+  const queueAllJsFiles = function (rootPath) {
+    if (manifest.patternLibFiles && manifest.patternLibFiles.js) {
+      manifest.patternLibFiles.js.forEach((js) => {
+        const href = `..${manifest.config.commonFolder}/${js.filename}`;
+
+        downloadedAssets[href] = false;
+        jsFileQueue.sync.push(href);
+      });
+    }
+
+    manifest.userPatterns.forEach((pattern) => {
+      if (!pattern.js) return;
+
+      pattern.js.forEach((js) => {
+        const href = `../${js.localPath}`;
+
+        downloadedAssets[href] = false;
+        jsFileQueue.async.push(href);
+      });
+    });
+  };
+
+  const addJsFile = function (href) {
+    const newScript = document.createElement('script');
+
+    newScript.setAttribute('src', href);
+    document.body.appendChild(newScript);
+
+    return newScript;
+  };
+
+  const bindNextJsFile = function (e) {
+    if (e && e.target) {
+      e.target.removeEventListener('load', bindNextJsFile);
+      downloadedAssets[e.target.getAttribute('src')] = true;
+    }
+
+    if (jsFileQueue.sync.length > 0) {
+      const scriptTag = addJsFile(jsFileQueue.sync.shift());
+      scriptTag.addEventListener('load', bindNextJsFile);
+    } else {
+      jsFileQueue.async.forEach((js) => {
+        const scriptTag = addJsFile(js);
+        scriptTag.addEventListener('load', downloadHandler);
+      });
+    }
   };
 
   const getPatternInfo = function (patternElem) {
@@ -312,7 +366,7 @@ const patternBotIncludes = function (manifest) {
           if (resp.status >= 200 && resp.status <= 299) {
             return resp.text();
           } else {
-            console.group('Cannot location pattern');
+            console.group('Cannot locate pattern');
             console.log(resp.url);
             console.log(`Error ${resp.status}: ${resp.statusText}`);
             console.groupEnd();
@@ -368,11 +422,13 @@ const patternBotIncludes = function (manifest) {
 
     rootPath = findRootPath();
     bindAllCssFiles(rootPath);
+    queueAllJsFiles(rootPath);
     allPatternTags = findAllPatternTags();
     allPatterns = constructAllPatterns(rootPath, allPatternTags);
 
     loadAllPatterns(allPatterns).then((allLoadedPatterns) => {
       renderAllPatterns(allPatternTags, allLoadedPatterns);
+      bindNextJsFile();
       hideLoadingScreen();
     }).catch((e) => {
       console.group('Pattern load error');
@@ -387,10 +443,10 @@ const patternBotIncludes = function (manifest) {
 
 /** 
  * Patternbot library manifest
- * /Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library
- * @version 1523203229570
+ * /Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060
+ * @version f4610785ec0520336cfd7478dcad270c10f40d55
  */
-const patternManifest_1523203229570 = {
+const patternManifest_f4610785ec0520336cfd7478dcad270c10f40d55 = {
   "commonInfo": {
     "modulifier": [
       "responsive",
@@ -585,82 +641,92 @@ const patternManifest_1523203229570 = {
   },
   "patternLibFiles": {
     "commonParsable": {
-      "gridifier": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/common/grid.css",
-      "typografier": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/common/type.css",
-      "modulifier": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/common/modules.css",
-      "theme": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/common/theme.css"
+      "gridifier": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/common/grid.css",
+      "typografier": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/common/type.css",
+      "modulifier": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/common/modules.css",
+      "theme": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/common/theme.css"
     },
     "imagesParsable": {
-      "icons": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/images/icons.svg"
+      "icons": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/images/icons.svg"
     },
     "logos": {
-      "sizeLarge": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/images/logo-256.svg",
-      "size64": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/images/logo-64.svg",
-      "size32": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/images/logo-32.svg",
-      "size16": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/images/logo-16.svg",
+      "sizeLarge": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/images/logo-256.svg",
+      "size64": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/images/logo-64.svg",
+      "size32": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/images/logo-32.svg",
+      "size16": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/images/logo-16.svg",
       "size16Local": "logo-16.svg",
       "sizeLargeLocal": "logo-256.svg",
       "size32Local": "logo-32.svg",
       "size64Local": "logo-64.svg"
     },
     "patterns": [
-      "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner",
-      "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/buttons",
-      "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/cards",
-      "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/footer",
-      "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/forms",
-      "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/header",
-      "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/section"
+      "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/banner",
+      "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/buttons",
+      "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/cards",
+      "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/footer",
+      "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/forms",
+      "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/header",
+      "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/section"
     ],
     "pages": [
       {
         "name": "check-out.html",
         "namePretty": "Check out",
-        "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/pages/check-out.html"
+        "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/pages/check-out.html"
       },
       {
         "name": "home.html",
         "namePretty": "Home",
-        "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/pages/home.html"
+        "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/pages/home.html"
+      },
+      {
+        "name": "product-details.html",
+        "namePretty": "Product details",
+        "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/pages/product-details.html"
       },
       {
         "name": "product-list.html",
         "namePretty": "Product list",
-        "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/pages/product-list.html"
+        "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/pages/product-list.html"
       }
-    ]
+    ],
+    "js": []
   },
   "userPatterns": [
     {
       "name": "banner",
       "namePretty": "Banner",
-      "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner",
+      "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/banner",
       "html": [
         {
           "name": "banner-dark",
           "namePretty": "Banner dark",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner/banner-dark.html",
+          "filename": "banner-dark",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/banner/banner-dark.html",
           "localPath": "patterns/banner/banner-dark.html",
           "readme": {}
         },
         {
           "name": "banner-light",
           "namePretty": "Banner light",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner/banner-light.html",
+          "filename": "banner-light",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/banner/banner-light.html",
           "localPath": "patterns/banner/banner-light.html",
           "readme": {}
         },
         {
           "name": "banner-no-btn-dark",
           "namePretty": "Banner no btn dark",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner/banner-no-btn-dark.html",
+          "filename": "banner-no-btn-dark",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/banner/banner-no-btn-dark.html",
           "localPath": "patterns/banner/banner-no-btn-dark.html",
           "readme": {}
         },
         {
           "name": "banner-no-button",
           "namePretty": "Banner no button",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner/banner-no-button.html",
+          "filename": "banner-no-button",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/banner/banner-no-button.html",
           "localPath": "patterns/banner/banner-no-button.html",
           "readme": {}
         }
@@ -669,7 +735,8 @@ const patternManifest_1523203229570 = {
         {
           "name": "readme",
           "namePretty": "Readme",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner/README.md",
+          "filename": "README",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/banner/README.md",
           "localPath": "patterns/banner/README.md"
         }
       ],
@@ -677,20 +744,23 @@ const patternManifest_1523203229570 = {
         {
           "name": "banner",
           "namePretty": "Banner",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/banner/banner.css",
+          "filename": "banner",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/banner/banner.css",
           "localPath": "patterns/banner/banner.css"
         }
-      ]
+      ],
+      "js": []
     },
     {
       "name": "buttons",
       "namePretty": "Buttons",
-      "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/buttons",
+      "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/buttons",
       "html": [
         {
           "name": "buttons",
           "namePretty": "Buttons",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/buttons/buttons.html",
+          "filename": "buttons",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/buttons/buttons.html",
           "localPath": "patterns/buttons/buttons.html"
         }
       ],
@@ -698,7 +768,8 @@ const patternManifest_1523203229570 = {
         {
           "name": "readme",
           "namePretty": "Readme",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/buttons/README.md",
+          "filename": "README",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/buttons/README.md",
           "localPath": "patterns/buttons/README.md"
         }
       ],
@@ -706,20 +777,23 @@ const patternManifest_1523203229570 = {
         {
           "name": "buttons",
           "namePretty": "Buttons",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/buttons/buttons.css",
+          "filename": "buttons",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/buttons/buttons.css",
           "localPath": "patterns/buttons/buttons.css"
         }
-      ]
+      ],
+      "js": []
     },
     {
       "name": "cards",
       "namePretty": "Cards",
-      "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/cards",
+      "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/cards",
       "html": [
         {
           "name": "basic-card",
           "namePretty": "Basic card",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/cards/basic-card.html",
+          "filename": "basic-card",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/cards/basic-card.html",
           "localPath": "patterns/cards/basic-card.html",
           "readme": {
             "width": 400,
@@ -729,7 +803,8 @@ const patternManifest_1523203229570 = {
         {
           "name": "light-card",
           "namePretty": "Light card",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/cards/light-card.html",
+          "filename": "light-card",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/cards/light-card.html",
           "localPath": "patterns/cards/light-card.html",
           "readme": {
             "width": 400,
@@ -741,7 +816,8 @@ const patternManifest_1523203229570 = {
         {
           "name": "readme",
           "namePretty": "Readme",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/cards/README.md",
+          "filename": "README",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/cards/README.md",
           "localPath": "patterns/cards/README.md"
         }
       ],
@@ -749,20 +825,23 @@ const patternManifest_1523203229570 = {
         {
           "name": "cards",
           "namePretty": "Cards",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/cards/cards.css",
+          "filename": "cards",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/cards/cards.css",
           "localPath": "patterns/cards/cards.css"
         }
-      ]
+      ],
+      "js": []
     },
     {
       "name": "footer",
       "namePretty": "Footer",
-      "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/footer",
+      "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/footer",
       "html": [
         {
           "name": "footer",
           "namePretty": "Footer",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/footer/footer.html",
+          "filename": "footer",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/footer/footer.html",
           "localPath": "patterns/footer/footer.html"
         }
       ],
@@ -770,7 +849,8 @@ const patternManifest_1523203229570 = {
         {
           "name": "readme",
           "namePretty": "Readme",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/footer/README.md",
+          "filename": "README",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/footer/README.md",
           "localPath": "patterns/footer/README.md"
         }
       ],
@@ -778,50 +858,58 @@ const patternManifest_1523203229570 = {
         {
           "name": "footer",
           "namePretty": "Footer",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/footer/footer.css",
+          "filename": "footer",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/footer/footer.css",
           "localPath": "patterns/footer/footer.css"
         }
-      ]
+      ],
+      "js": []
     },
     {
       "name": "forms",
       "namePretty": "Forms",
-      "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/forms",
+      "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/forms",
       "html": [
         {
           "name": "address-form",
           "namePretty": "Address form",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/forms/address-form.html",
+          "filename": "address-form",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/forms/address-form.html",
           "localPath": "patterns/forms/address-form.html"
         },
         {
           "name": "email-form",
           "namePretty": "Email form",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/forms/email-form.html",
+          "filename": "email-form",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/forms/email-form.html",
           "localPath": "patterns/forms/email-form.html"
         },
         {
           "name": "form",
           "namePretty": "Form",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/forms/form.html",
+          "filename": "form",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/forms/form.html",
           "localPath": "patterns/forms/form.html"
         },
         {
           "name": "list-form",
           "namePretty": "List form",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/forms/list-form.html",
+          "filename": "list-form",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/forms/list-form.html",
           "localPath": "patterns/forms/list-form.html"
         },
         {
           "name": "phone-form",
           "namePretty": "Phone form",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/forms/phone-form.html",
+          "filename": "phone-form",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/forms/phone-form.html",
           "localPath": "patterns/forms/phone-form.html"
         },
         {
           "name": "quantity-form",
           "namePretty": "Quantity form",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/forms/quantity-form.html",
+          "filename": "quantity-form",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/forms/quantity-form.html",
           "localPath": "patterns/forms/quantity-form.html"
         }
       ],
@@ -829,7 +917,8 @@ const patternManifest_1523203229570 = {
         {
           "name": "readme",
           "namePretty": "Readme",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/forms/README.md",
+          "filename": "README",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/forms/README.md",
           "localPath": "patterns/forms/README.md"
         }
       ],
@@ -837,26 +926,30 @@ const patternManifest_1523203229570 = {
         {
           "name": "form",
           "namePretty": "Form",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/forms/form.css",
+          "filename": "form",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/forms/form.css",
           "localPath": "patterns/forms/form.css"
         }
-      ]
+      ],
+      "js": []
     },
     {
       "name": "header",
       "namePretty": "Header",
-      "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/header",
+      "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/header",
       "html": [
         {
           "name": "hero-header-dark",
           "namePretty": "Hero header dark",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/header/hero-header-dark.html",
+          "filename": "hero-header-dark",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/header/hero-header-dark.html",
           "localPath": "patterns/header/hero-header-dark.html"
         },
         {
           "name": "hero-header",
           "namePretty": "Hero header",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/header/hero-header.html",
+          "filename": "hero-header",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/header/hero-header.html",
           "localPath": "patterns/header/hero-header.html"
         }
       ],
@@ -864,7 +957,8 @@ const patternManifest_1523203229570 = {
         {
           "name": "readme",
           "namePretty": "Readme",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/header/README.md",
+          "filename": "README",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/header/README.md",
           "localPath": "patterns/header/README.md"
         }
       ],
@@ -872,20 +966,23 @@ const patternManifest_1523203229570 = {
         {
           "name": "hero-header",
           "namePretty": "Hero header",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/header/hero-header.css",
+          "filename": "hero-header",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/header/hero-header.css",
           "localPath": "patterns/header/hero-header.css"
         }
-      ]
+      ],
+      "js": []
     },
     {
       "name": "section",
       "namePretty": "Section",
-      "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/section",
+      "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/section",
       "html": [
         {
           "name": "section",
           "namePretty": "Section",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/section/section.html",
+          "filename": "section",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/section/section.html",
           "localPath": "patterns/section/section.html",
           "readme": {}
         }
@@ -894,7 +991,8 @@ const patternManifest_1523203229570 = {
         {
           "name": "readme",
           "namePretty": "Readme",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/section/README.md",
+          "filename": "README",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/section/README.md",
           "localPath": "patterns/section/README.md"
         }
       ],
@@ -902,10 +1000,12 @@ const patternManifest_1523203229570 = {
         {
           "name": "section",
           "namePretty": "Section",
-          "path": "/Users/TheCreativeKrys/Documents/Semester 4/Web Development IV/Week 3/ecommerce-pattern-library/patterns/section/section.css",
+          "filename": "section",
+          "path": "/Users/Tori/Desktop/Semester 4/Web Dev IV/ecommerce-pattern-library-shee0060/patterns/section/section.css",
           "localPath": "patterns/section/section.css"
         }
-      ]
+      ],
+      "js": []
     }
   ],
   "config": {
@@ -928,5 +1028,5 @@ const patternManifest_1523203229570 = {
   }
 };
 
-patternBotIncludes(patternManifest_1523203229570);
+patternBotIncludes(patternManifest_f4610785ec0520336cfd7478dcad270c10f40d55);
 }());
